@@ -1,8 +1,11 @@
 package com.example.examplemod;
 
+import com.example.examplemod.block.ModBlocks;
+import com.example.examplemod.item.ModCreativeModeTaps;
 import com.example.examplemod.item.ModItems;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.CreativeModeTabSearchRegistry;
 import net.neoforged.neoforge.event.server.ServerStoppingEvent;
 import org.apache.logging.log4j.LogManager;
 import org.slf4j.Logger;
@@ -46,6 +49,8 @@ public class ExampleMod {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+        ModCreativeModeTaps.register(modEventBus);
 
 
         modEventBus.addListener(this::addCreative);
@@ -62,6 +67,7 @@ public class ExampleMod {
             //加入bismuth
             event.accept(ModItems.BISMUTH);
             event.accept(ModItems.ZHUZHUZI);
+            event.accept(ModBlocks.ZHUZHUZI_BLOCK);
 
         }
     }

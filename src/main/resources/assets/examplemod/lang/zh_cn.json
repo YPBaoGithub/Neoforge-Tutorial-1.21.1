@@ -1,4 +1,6 @@
 {
   "item.examplemod.bismuth": "铋",
-  "item.examplemod.zhuzhuzi": "zqiu233"
+  "item.examplemod.zhuzhuzi": "zqiu233",
+  "block.examplemod.zhuzhuzi_block": "zqiu233块",
+  "creativetab.examplemod.zhuzhuzi_tab": "猪猪子"
 }
